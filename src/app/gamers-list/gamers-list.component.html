@@ -1,0 +1,14 @@
+<div *ngFor="let giocatore of giocatori; let i=index">
+<mat-card class="gamer-card">
+    <mat-card-header>
+      <mat-card-title>{{giocatore.firstname}} {{giocatore.lastname}}</mat-card-title>
+      <mat-card-subtitle>{{giocatore.description}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{giocatore.immagine}}>
+    <mat-card-actions>
+        <div id="elimina">
+            <button (click)="onDelete(i);" aria-label="Show an example snack-bar" mat-raised-button color="warn">Elimina</button>
+        </div>
+        </mat-card-actions>
+  </mat-card>
+</div>

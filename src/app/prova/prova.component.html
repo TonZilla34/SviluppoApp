@@ -1,0 +1,21 @@
+<h2>AAAOOOOOAAAAAAAAA vabbhè</h2>
+
+<ul>
+    <li *ngFor="let nome of nomi">
+        {{ nome }}
+    </li>
+</ul>
+
+<ul>
+    <ng-container *ngFor="let numero of numeri">
+        <li *ngIf="numero > 5 else lowNumber">
+            <p [class.isTen] = "numero === 10">
+                {{ numero }}
+            </p>
+        </li>
+    </ng-container>
+</ul>
+
+<ng-template #lowNumber>
+    <p> NUMERO PICCOLO </p>
+</ng-template>
